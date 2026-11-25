@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xHamster 2.0 - Official Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0d13;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 550px;
+            width: 100%;
+            background: rgba(22, 27, 38, 0.8);
+            border: 1px solid rgba(255, 77, 77, 0.3);
+            border-radius: 20px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            margin-top: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-box {
+            width: 130px;
+            height: 130px;
+            background: #ffffff;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid #ff4d4d;
+            box-shadow: 0 10px 25px rgba(255, 77, 77, 0.4);
+            overflow: hidden;
+        }
+
+        .logo-box img {
+            width: 85%;
+            height: 85%;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        h1 span {
+            color: #ff4d4d;
+        }
+
+        p {
+            color: #94a3b8;
+            font-size: 15px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #ff4d4d, #e60000);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 77, 77, 0.6);
+        }
+
+        /* পপ-আপ মেসেজ বক্স */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+            z-index: 99;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #161b26;
+            border: 1px solid #ff4d4d;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 380px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .modal-content h2 {
+            color: #ff4d4d;
+            margin-bottom: 10px;
+        }
+
+        .modal-content p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #64748b;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-box">
+            <!-- এখানে আপনার লোগো ছবির নাম দিতে হবে -->
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <h1>x<span>Hamster</span> 2.0</h1>
+        <p>Official community hub and viral link sharing platform. Click below to explore more!</p>
+        <button class="btn" onclick="showAlert()">Explore Site 🔥</button>
+    </div>
+
+    <!-- পপ-আপ উইন্ডো -->
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <h2>😂 ধরা খেয়েছো!</h2>
+            <p>এটা একটা ফান প্র্যাঙ্ক ওয়েবসাইট! চমৎকার আইডিয়া, তাই না? 🐹</p>
+            <button class="btn" style="padding: 10px 20px; font-size: 14px;" onclick="closeAlert()">ঠিক আছে</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 xHamster 2.0. All rights reserved.
+    </footer>
+
+    <script>
+        function showAlert() {
+            document.getElementById('myModal').style.display = 'flex';
+        }
+        function closeAlert() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
